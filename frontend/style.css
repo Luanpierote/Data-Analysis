@@ -1,0 +1,48 @@
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: hsl(220, 20%, 97%);
+    color: hsl(220, 20%, 10%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  h1 { font-size: 1.875rem; font-weight: 700; margin-bottom: 0.5rem; }
+  p { color: hsl(220, 10%, 46%); margin-bottom: 2rem; }
+  .table-wrapper {
+    width: 100%;
+    max-width: 48rem;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    border: 1px solid hsl(220, 13%, 91%);
+  }
+  table { width: 100%; border-collapse: collapse; text-align: left; }
+  thead tr { background: hsl(217, 91%, 60%); }
+  th {
+    padding: 1rem 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff;
+  }
+  tbody tr { transition: background 0.15s; }
+  tbody tr:nth-child(odd) { background: #fff; }
+  tbody tr:nth-child(even) { background: hsl(220, 20%, 98%); }
+  tbody tr:hover { background: hsl(217, 91%, 97%); }
+  td { padding: 1rem 1.5rem; font-size: 0.875rem; border-top: 1px solid hsl(220, 13%, 91%); }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .badge-green { background: #d1fae5; color: #047857; }
+  .badge-amber { background: #fef3c7; color: #b45309; }
+  .badge-red   { background: #fee2e2; color: #b91c1c; }

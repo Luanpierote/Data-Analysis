@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histeograma</title>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Tabela de Notas</h1>
+    <h1>Notas dos Alunos</h1>
 
-    <div class="tabela">
+    <div class="tabela" id="table-wrapper">
         <table>
             <thead>
                 <tr>
@@ -17,20 +19,21 @@
                     <th>Nota</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="table-body">
            
             </tbody>
         </table>
     </div>
 
-<script src="index.js"></script>
-<script id="tmplLinha" type="text/template">
+
+<template id="tmplLinha" >
     <!-- MODELO -->
     <tr>
-        <td class= 'id'></td>
-        <td class= 'nome'></td>
-        <td class = 'nota'></td>
+        <td class='id'></td>
+        <td class='nome'></td>
+        <td class ='nota'></td>
     </tr>
-</script>
+</template>
+<script src="index.js"></script>
 </body>
 </html>
