@@ -1,5 +1,6 @@
 from db_join import buscar_notas,novo_registro,atualizar_registro,deletar_registro
 from flask import Flask,jsonify
+from flask_cors import CORS
 
 dados = buscar_notas()
 
@@ -8,12 +9,9 @@ soma = sum(float(nota) for _,nota in dados) #função que efetua a soma de uma l
  
 media = soma/len(dados[1])  
 
-atualizar_registro(6,6.5)
-
-deletar_registro(5)
-
 """ LIGANDO O SERVIDOR """
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/usuarios")
 def usuarios():

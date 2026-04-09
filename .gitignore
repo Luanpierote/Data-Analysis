@@ -1,9 +1,10 @@
-# ANTES DE COMMITAR, CONFIRA ESTE ARQUIVO
-
+# Dependencias
 package-lock.json
 package.json
 
+# Biblioteca
 node_modules
 
+# Cache
 __pycache__
 
