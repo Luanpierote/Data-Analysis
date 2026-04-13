@@ -34,9 +34,10 @@ function renderizarDados(dados) {
         // Index temporário
         const clone = template.content.cloneNode(true)
 
-        clone.querySelector(".id").textContent = index + 1
-        clone.querySelector(".nome").textContent = item[0]
-        clone.querySelector(".nota").textContent = item[1]
+        clone.querySelector(".id").textContent = item[0]
+        clone.querySelector(".nome").textContent = item[1]
+        clone.querySelector(".nota").textContent = item[2]
+        clone.querySelector(".aprovacao").textContent = item[3]
 
         tbody.appendChild(clone)
     })

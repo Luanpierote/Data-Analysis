@@ -1,4 +1,4 @@
-# Dependencias
+# Dependências
 package-lock.json
 package.json
 
@@ -8,3 +8,5 @@ node_modules
 # Cache
 __pycache__
 
+
+models
