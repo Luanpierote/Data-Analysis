@@ -10,33 +10,48 @@
 </head>
 
 <body>
-    
-<section>
-    <div class="container">
-        <h1>Tabela de Alunos</h1>
-        <div class="tabela" id="table-wrapper">
+
+    <section>
+        <div class="container">
+            <h1>Tabela de Alunos</h1>
+            <div class="tabela" id="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Nota</th>
+                            <th>Aprovação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-user">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h1>Tabela de Preços de Imóveis</h1>
+            <div class="tabela" id="table-wrapper">
             <table>
                 <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Nota</th>
-                        <th>Aprovação</th>
-                    </tr>
+                    <th>id</th>
+                    <th>date</th>
+                    <th>price bedrooms</th>
+                    <th>bedrooms</th>
+                    <th>bathrooms</th>
+                    <th>sqft_living</th>
+                    <th>sqft_lot</th>
+                    <th>floors</th>
                 </thead>
-                <tbody id="table-body">
-
-                </tbody>
+                <tbody id="table-imovel"></tbody>
             </table>
+            </div>
         </div>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <h1>Tabela de Preços de Imóveis</h1>
-    </div>
-</section>
+    </section>
 
     <template id="tmplLinha">
         <!-- MODELO -->
@@ -45,6 +60,19 @@
             <td class='nome'></td>
             <td class='nota'></td>
             <td class='aprovacao'></td>
+        </tr>
+    </template>
+
+    <template id='tmplLinha_2'>
+        <tr>
+            <td class="id"></td>
+            <td class="date"></td>
+            <td class="price"></td>
+            <td class="bedrooms"></td>
+            <td class="bathrooms"></td>
+            <td class='sqft_living'></td>
+            <td class='sqft_lot'></td>
+            <td class="floors"></td>
         </tr>
     </template>
     <script src="index.js"></script>

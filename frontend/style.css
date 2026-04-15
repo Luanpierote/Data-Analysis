@@ -29,7 +29,7 @@
 
  section{
  margin: 2rem 0;
- width: 600px;
+ max-width: 1000px;
  }
 
  .container {
@@ -39,7 +39,7 @@
    /* ou outra cor */
    padding: 2rem;
    border-radius: 12px;
-   width: 90%;
+   min-width: 104%;
    
    /* centralizar */
    margin: 0 auto;
@@ -50,7 +50,6 @@
 
  .table-wrapper {
    width: 100%;
-   max-width: 48rem;
    overflow: hidden;
    border-radius: 0.75rem;
    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -59,7 +58,7 @@
  }
 
  table {
-   width: 100%;
+   max-width: 100%;
    border-collapse: collapse;
    text-align: left;
  }
