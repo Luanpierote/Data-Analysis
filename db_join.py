@@ -1,10 +1,13 @@
 import sqlite3
 import pandas as pd
+import numpy as np
 
 # Iniciar conexão
 # conn = sqlite3.connect("meubanco.db") É INVIÁVEL COMPARTILHAR A CONEXÃO DO BANCO GLOBALMENTE 
 
 # Criar um cursor
+
+bd_imovel = pd.read_csv("models/house_prices.csv")
 
 # Read
 def buscar_dados():
@@ -47,10 +50,25 @@ def deletar_registro(id):
   
  # cursor.fetchone() - Retorna somente 1 linha do banco 
 
-def buscar_dados_csv():
-   bd_imovel = pd.read_csv("models/house_prices.csv")
-   bd_imovel = bd_imovel.iloc[:10,:8]
-   return bd_imovel
+def buscar_dados_tabela_csv():
+    bd_imovel["date"] = pd.to_datetime(bd_imovel["date"]).dt.to_period("M").astype(str)
+    return bd_imovel.iloc[:10, :8].to_dict(orient='records')
 
+def buscar_dados_grafico_csv():
+    bd_subset = bd_imovel.copy()
+    print(bd_subset)
+    # Coluna do tipo Datetime
+    bd_subset["date"] = pd.to_datetime(bd_subset["date"])
+    
+    # Agrupando pelo período mensal e calculando a média do preço/ todos os dados que pertencem ao mesmo mês são colocados no mesmo lugar
+    # Ex: Grupo 2026-01: [65.000, 64.000]
+    bd_agregado = bd_subset.groupby(bd_subset["date"].dt.to_period("M"))
+    # O pandas "joga" o índice de volta para dentro do DataFrame como uma coluna comum, e transforma em uma lista de objetos comum
+    bd_agregado = bd_agregado["price"].mean().reset_index()
 
-buscar_dados_csv()
+    # Converta de volta para string para o Chart.js entender
+    bd_agregado["date"] = bd_agregado["date"].astype(str)
+    
+    return  bd_agregado.to_dict(orient='records')
+    
+

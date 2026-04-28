@@ -1,4 +1,4 @@
-# objetivo: Tendencia Central - Média,mediana,moda
+# objetivo: Desenvolver sistema de gerenciamento de dados local✅
 
 # operação: use o módulo math se precisar
 

@@ -1,3 +1,9 @@
+# Pastas
+models
+
+# Arquivos
+calculo.py
+
 # Dependências
 package-lock.json
 package.json
@@ -9,4 +15,3 @@ node_modules
 __pycache__
 
 
-models
