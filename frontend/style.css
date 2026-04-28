@@ -57,6 +57,10 @@
 
  }
 
+ .grafico{
+  margin-top: 10px
+ }
+
  table {
    max-width: 100%;
    border-collapse: collapse;
@@ -120,4 +124,10 @@
  .badge-red {
    background: #fee2e2;
    color: #b91c1c;
+ }
+
+ #mychart{
+  background-color: #ffffff;
+  width: 500px;
+  height: 470px;
  }
